@@ -104,8 +104,8 @@ def ej2():
     raiz_cuadrada_1 = math.sqrt(numero_1) 
     raiz_cuadrada_2 = math.sqrt(numero_2)
 
-    print("[*] La raíz cuadrada de [{}] (número 1) es: {:.4f}".format(numero_1, raiz_cuadrada_1))
-    print("[*] La raíz cuadrada de [{}] (número 2) es: {:.4f}".format(numero_2, raiz_cuadrada_2))
+    print("[*] La raíz cuadrada de [{}] (número 1) es: {:.3f}".format(numero_1, raiz_cuadrada_1))
+    print("[*] La raíz cuadrada de [{}] (número 2) es: {:.3f}".format(numero_2, raiz_cuadrada_2))
 
 
 def ej3():
@@ -122,6 +122,11 @@ def ej3():
     a la función (es decir que las modificaciones realizadas
     en la función afectan a la variable pasada como argumento)
     '''
+    def ordenar(numeros):
+        numeros.sort(reverse=True)
+
+    ordenar(numeros=numeros)
+    print(numeros)
 
 
 def ej4():
@@ -171,7 +176,7 @@ def ej5():
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
     #ej1()
-    ej2()
-    #ej3()
+    #ej2()
+    ej3()
     #ej4()
     #ej5()
