@@ -5,7 +5,6 @@ Ejercicios de clase
 ---------------------------
 Autor: Inove Coding School
 Version: 1.1
-
 Descripcion:
 Programa creado para poner a prueba los conocimientos
 adquiridos durante la clase
@@ -27,20 +26,28 @@ def ej1():
     reciba como parámetro una lista de números y calcule
     el promedio de ella como:
     promedio = sumatoria_numeros / cantidad_numeros
-
     Resuelva la sumatoria y la cantidad con las herramientas
     que desee, recomendamos usar las funciones disponibles
     de Python para ello o en tal caso realizar un bucle
     https://docs.python.org/3.7/library/functions.html
-
     La función debe retornar el promedio calculado
     La función debe contemplar si se le pasa una lista vacia
     (es decir, de "0" elementos)
-
     Utilice esa función para calcular el promedio y luego
     imprima en pantalla el resultado
     '''
+    def promedio():
+        len_value = len(numeros)
+        sumatoria = 0
 
+        for numero in numeros:
+            sumatoria += numero
+            
+        prom_valores = sumatoria / len_value
+
+        print("El promedio de la lista es: {}".format(prom_valores))
+
+    promedio()
 
 def ej2():
     # Ejercicios con modulos del sistema
@@ -60,7 +67,6 @@ def ej2():
     "inicio y fin" y la cantidad de elementos que deseamos que
     contenga la lista, es decir, la cantidad de elementos random a generar.
     def lista_aleatoria (inicio, fin, cantidad)
-
     Dicha función debe retornar la lista de elementos random generados.
     '''
 
@@ -100,7 +106,6 @@ def ej3():
     ya que al tratarce de una lista se pasa como referencia
     a la función (es decir que las modificaciones realizadas
     en la función afectan a la variable pasada como argumento)
-
     '''
 
 
@@ -111,14 +116,12 @@ def ej4():
     '''
     Utilice la función "lista_aleatoria" para generar
     una lista de 5 números en un rango de 1 a 9 inclusive
-
     Generar una una nueva funcion que se llame "contar",
     que cuenta la cantidad de veces que un elemento pasado
     por parámetro se repite en la lista.
     Para saber cuantas veces se repiten el elemento pasado 
     en la lista pueden usar bucles o el método nativo de list
     "count"
-
     '''
 
     # Por ejemplo creo una lista de 5 elemtnos
@@ -133,7 +136,6 @@ def ej5():
     '''
     Utilice la función "lista_aleatoria" para generar
     una lista de 5 números en un rango de 1 a 9 inclusive
-
     Generar una una nueva funcion que se llame "buscar",
     que genere una lista con los índice de las posiciones
     en donde se encuentra dicho elemento en la lista.
