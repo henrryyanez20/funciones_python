@@ -15,6 +15,7 @@ __email__ = "alumnos@inove.com.ar"
 __version__ = "1.1"
 
 import random
+import math
 
 
 def ej1():
@@ -58,7 +59,7 @@ def ej2():
     # Ejemplo de como obtener un numero aleatorio
     # entre inicio y fin
     # inicio <= numero <= fin
-    numero = random.randrange(inicio, fin+1)
+    #numero = random.randrange(inicio, fin+1)
     # Documentación oficial de random
     # https://docs.python.org/3.7/library/random.html
 
@@ -71,15 +72,25 @@ def ej2():
     Dicha función debe retornar la lista de elementos random generados.
     '''
 
-    # numeros = lista_aleatoria (inicio, fin, cantidad)
+    def lista_aleatoria(inicio, fin, cantidad):
+          lista = [0]  * cantidad
+          for i in range(cantidad):
+              lista[i] = random.randint(inicio, fin)
+          return lista
+
+   # numeros = lista_aleatoria (inicio, fin, cantidad)
+    aleatorios=lista_aleatoria(1, 4, 16)
+    len_cant = len(aleatorios)
 
     # Imprima en pantalla la lista de elementos generados
     # print(....)
+    print("[*] Lista Aleatoria con [{}] elementos:\n\n-->{}<--\n".format(len_cant, aleatorios))
+
 
     # Utilice el método random.choice para obtener 2 numeros
     # de la lista de elementos generados
-    # numero_1 = random.choice(...)
-    # numero_2 = random.choice(...)
+    numero_1 = random.choice(aleatorios)
+    numero_2 = random.choice(aleatorios)
 
     # Importar en este programa/documento el modulo "math"
     # Calcular la raiz cuadrada (square root) de esos
@@ -90,8 +101,11 @@ def ej2():
     # NOTA: Puede buscar en el medio que prefiera la info
     # solicitada
 
-    # raiz_cuadrada_1 = ....
-    # raiz_cuadrada_2 = ....
+    raiz_cuadrada_1 = math.sqrt(numero_1) 
+    raiz_cuadrada_2 = math.sqrt(numero_2)
+
+    print("[*] La raíz cuadrada de [{}] (número 1) es: {:.4f}".format(numero_1, raiz_cuadrada_1))
+    print("[*] La raíz cuadrada de [{}] (número 2) es: {:.4f}".format(numero_2, raiz_cuadrada_2))
 
 
 def ej3():
@@ -156,8 +170,8 @@ def ej5():
 
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
-    ej1()
-    #ej2()
+    #ej1()
+    ej2()
     #ej3()
     #ej4()
     #ej5()
