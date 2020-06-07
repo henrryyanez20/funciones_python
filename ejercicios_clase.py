@@ -40,12 +40,13 @@ def ej1():
         len_value = len(numeros)
         sumatoria = 0
 
-        for numero in numeros:
-            sumatoria += numero
-            
-        prom_valores = sumatoria / len_value
-
-        print("El promedio de la lista es: {}".format(prom_valores))
+        if len_value != 0:
+            for numero in numeros:
+                sumatoria += numero
+            prom_valores = sumatoria / len_value
+            print("El promedio de la lista es: {}".format(prom_valores))
+        else:
+            print("[*] La lista no tiene elementos, \npor favor ingresa valores")
 
     promedio()
 
