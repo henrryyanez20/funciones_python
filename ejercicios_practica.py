@@ -98,7 +98,18 @@ def ej3():
     Les dejamos este ejercicio para que lo piensen, lo pueden dejar para el final
     Cualquier duda nos escriben en el Campus
     '''
+   
+    def factorial(numero):
+        if numero > 1:
+            return numero * factorial(numero - 1)
+        else:
+            return 1
+    
+    valor = 4
 
+    fact=factorial(valor)
+    print('[*] El factorial de {} es: {}'.format(valor, fact))
+ 
 
 def ej4():
     print("Un pequeño paso en la estadística, un gran paso en Python")
@@ -186,7 +197,7 @@ def ej5():
 if __name__ == '__main__':
     print("Ejercicios de práctica")
     #ej1()
-    ej2()
-    #ej3()
+    #ej2()
+    ej3()
     #ej4()
     #ej5()
