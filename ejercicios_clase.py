@@ -143,6 +143,23 @@ def ej4():
     en la lista pueden usar bucles o el método nativo de list
     "count"
     '''
+    def lista_aleatoria(inicio, fin, cantidad):
+          lista = [0]  * cantidad
+          for i in range(cantidad):
+              lista[i] = random.randint(inicio, fin)
+          return lista
+
+    # numeros = lista_aleatoria (inicio, fin, cantidad)
+    aleatorios=lista_aleatoria(1, 9, 5)
+    len_cant = len(aleatorios)
+    print(aleatorios)
+
+    def contar(aleatorios):
+        for i, valor in enumerate(aleatorios):
+            elm_count = aleatorios.count(valor)
+            print(i, ': ', valor, ' Se repite ', elm_count, ' veces ', sep='')
+
+    contar(aleatorios=aleatorios)
 
     # Por ejemplo creo una lista de 5 elemtnos
     # lista_numeros = lista_aleatoria(...,...,cantidad_numeros)
@@ -177,6 +194,6 @@ if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
     #ej1()
     #ej2()
-    ej3()
-    #ej4()
+    #ej3()
+    ej4()
     #ej5()
