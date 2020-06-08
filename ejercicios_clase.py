@@ -184,6 +184,24 @@ def ej5():
     vez en la lista.
     '''
 
+    def lista_aleatoria(inicio, fin, cantidad):
+          lista = [0]  * cantidad
+          for i in range(cantidad):
+              lista[i] = random.randint(inicio, fin)
+          return lista
+
+    # numeros = lista_aleatoria (inicio, fin, cantidad)
+    aleatorios=lista_aleatoria(1, 9, 5)
+    len_cant = len(aleatorios)
+    print(aleatorios)
+
+    def buscar(aleatorios):
+        for i, valor in enumerate(aleatorios):
+            elm_count = aleatorios.count(valor)
+            print('El índice [{}] contiene el valor [{}]'.format(i, valor))
+
+    buscar(aleatorios=aleatorios)
+
     # Por ejemplo creo una lista de 5 elemtnos
     # lista_numeros = lista_aleatoria(...,...,cantidad_numeros)
     # Luego quiero averiguar cuantas veces se repite el numero 3
@@ -195,5 +213,5 @@ if __name__ == '__main__':
     #ej1()
     #ej2()
     #ej3()
-    ej4()
-    #ej5()
+    #ej4()
+    ej5()
