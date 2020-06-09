@@ -41,7 +41,7 @@ def contar(aleatorios):
 
 #PROMEDIO
 numeros = []
-def promedio():
+def promedio(numeros):
     len_value = len(numeros)
     sumatoria = 0
 
@@ -49,7 +49,7 @@ def promedio():
         for numero in numeros:
             sumatoria += numero
         prom_valores = sumatoria / len_value
-        print("El promedio de la lista es: {}".format(prom_valores))
+        return prom_valores
     else:
         print("[*] La lista no tiene elementos, \npor favor ingresa valores")
 
