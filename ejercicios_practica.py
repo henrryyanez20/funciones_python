@@ -219,6 +219,42 @@ def ej5():
     5) Debe repetir este proceso hasta que en su lista de "dados
     guardados" tenga "generala", es decir, 5 números iguales.
     '''
+    #Creo mi lista aleatoria del 1 al 6 con 5 elementos
+    lista = mymodules.lista_aleatoria(1, 6, 5)
+    print('\nLista aleatoria de dados lanzados: ',lista, end="\n\n")
+    #Calulo el numero que más se repite en la lista
+    valor = max(lista, key=lista.count)
+    print("[*] Numero que más se repite de la lista: {}".format(valor))
+
+    #Separo la lista de numeros guardados con la de dados por tirar:
+
+    dados_guardados = []
+    dados_para_tirar= []
+    
+    for a in lista:
+        if valor == a:
+            dados_guardados.append(a)
+        else:
+            dados_para_tirar.append(a)
+    
+    print("[*] Dados Guardados: {}\n[*] Dados para Tirar: {}".format(dados_guardados, dados_para_tirar))
+
+    cant_tirar = len(dados_para_tirar)
+    print("Quedan por tirar [{}] veces los dados".format(cant_tirar))
+    
+    lista_generica = []
+    lista_generica = mymodules.lista_aleatoria(1, 6, cant_tirar)
+    print('\nNuevos resultados de los numeros pendientes por tirar (lista_generica): ',lista_generica, end="\n\n")
+
+    for b in lista_generica:
+        if b == valor:
+            dados_guardados.append(b)
+        else:
+            lista_generica = mymodules.lista_aleatoria(1, 6, cant_tirar)
+            
+    print("La lista generica queda así: {}".format(lista_generica))
+
+    print("La lista de Dados Guardados queda así: {}".format(dados_guardados))
 
 
 if __name__ == '__main__':
@@ -226,5 +262,5 @@ if __name__ == '__main__':
     #ej1()
     #ej2()
     #ej3()
-    ej4()
-    #ej5()
+    #ej4()
+    ej5()
