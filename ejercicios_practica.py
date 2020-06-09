@@ -15,6 +15,7 @@ __email__ = "alumnos@inove.com.ar"
 __version__ = "1.1"
 
 import random
+import math
 
 import mymodules
 
@@ -108,7 +109,7 @@ def ej3():
     valor = 4
 
     fact=factorial(valor)
-    print('[*] El factorial de {} es: {}'.format(valor, fact))
+    print('[*] El factorial de {}! es: {}'.format(valor, fact))
  
 
 def ej4():
@@ -142,6 +143,32 @@ def ej4():
     4 - Calcular la raiz cuadrada con el método de math correspondiente.
     '''
     # Mi implementación de desvió estandar a continuación:
+
+    lista = mymodules.lista_aleatoria(0, 100, 20)
+    print('Lista aleatoria: ',lista)
+
+    promedio_num = mymodules.promedio(lista)
+    print("El promedio es: ",promedio_num)
+
+    desv = []  #Inicializo una nueva lista para iniciar el append con el valor absoluto:
+
+    for a in lista:
+        absoluto = (abs(a - promedio_num))**2
+        #print(absoluto)
+        desv.append(absoluto)
+    print(desv)
+
+    #Sumo los elementos de la lista resultande del absoluto.
+    suma = 0
+    for b in desv:
+        suma = b + suma
+    print("La sumatoria es {}".format(suma))
+
+    #Calculo la desviación estandar:
+    desviacion = math.sqrt(suma / len(desv))
+    print("La desvisión estándar es : {}".format(desviacion))
+
+
 
     '''
     Ahora que han terminado, importe el módulo "statistics" y realice
@@ -198,6 +225,6 @@ if __name__ == '__main__':
     print("Ejercicios de práctica")
     #ej1()
     #ej2()
-    ej3()
-    #ej4()
+    #ej3()
+    ej4()
     #ej5()
